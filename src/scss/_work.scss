@@ -1,0 +1,51 @@
+@use "mixins/variables" as var;
+
+.big-title {
+  color: black;
+  font-size: 6.3em;
+  font-family: var.$font-secondary;
+  padding-top: 40px;
+  padding-bottom: 0;
+  margin-bottom: -15px;
+  margin-left: 70px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  &__button {
+    background: none;
+    color: inherit;
+    padding: 0;
+    width: 80%;
+    font: inherit;
+    //cursor: pointer;
+    outline: inherit;
+  }
+}
+.work {
+  height: 100vh;
+  .work-navigation {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 75%;
+    &__links {
+      padding-top: 10%;
+      margin-left: 20px;
+      //text-decoration: none;
+      color: var.$secondary-color;
+    }
+    &__links:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.projects__photos {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  padding-left: 55px;
+}

@@ -1,0 +1,44 @@
+@use "./mixins/variables" as var;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  //align-items: center;
+  &__title {
+    color: black;
+    font-size: 6.3em;
+    font-family: var.$font-secondary;
+    padding-top: 80px;
+    padding-bottom: 0;
+    margin-bottom: -15px;
+    margin-left: 70px;
+  }
+  &__photoDiv {
+    display: flex;
+    flex-direction: row;
+  }
+  &__navDiv {
+    display: flex;
+    flex-direction: column;
+  }
+}
+img {
+  width: 230px;
+  margin-left: 20px;
+  border: 1px black solid;
+}
+.about-navigation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 98%;
+  &__links {
+    padding-top: 7px;
+    color: var.$secondary-color;
+  }
+  &__links:hover {
+    color: white;
+    cursor: pointer;
+  }
+}

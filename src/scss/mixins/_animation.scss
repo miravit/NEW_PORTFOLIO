@@ -1,0 +1,33 @@
+@use "variables" as var;
+
+//// Front End - Developer/////////////
+.content__FED {
+  height: 30vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+  margin-bottom: -100px;
+
+  h2 {
+    width: 300px;
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    font-family: var.$font-stack;
+    font-size: 1.7em;
+    letter-spacing: 0px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 30;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
