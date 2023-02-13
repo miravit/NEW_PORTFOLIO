@@ -41,12 +41,16 @@ todoPhoto.addEventListener("click", () => {
     ) as HTMLDivElement;
     const todoHead: HTMLParagraphElement = document.createElement("p");
     const todoText: HTMLSpanElement = document.createElement("span");
+    const todoLink: HTMLAnchorElement = document.createElement("a");
     todoHead.classList.add("clickedHead");
     todoText.classList.add("clickedText");
+    todoLink.classList.add("clickedLink");
     todoHead.innerHTML = "School";
     todoText.innerHTML =
       "This project is from the course Javascript introduction where I made an app simulation a todolist. The application allows the user to create, remove and tick of any done task using local storage.";
-
+    todoLink.innerHTML = "See Project";
+    todoLink.setAttribute("href", "https://github.com/miravit/todolist");
+    todoLink.setAttribute("target", "_blank");
     //   const todoMobile: HTMLImageElement = document.createElement("img");
     //   todoMobile.src = "../assets/todolist-mobile.png";
     //   todoMobile.alt = "mobile version";
@@ -54,6 +58,7 @@ todoPhoto.addEventListener("click", () => {
     //   todoMobile.setAttribute("src", "./assets/todolist-mobile.png");
     todoDiv.appendChild(todoHead);
     todoDiv.appendChild(todoText);
+    todoDiv.appendChild(todoLink);
   }
   todo = false;
 });
@@ -69,10 +74,15 @@ tshirtPhoto.addEventListener("click", () => {
     ) as HTMLDivElement;
     const tshirtHead: HTMLParagraphElement = document.createElement("p");
     const tshirtText: HTMLSpanElement = document.createElement("span");
+    const tshirtLink: HTMLAnchorElement = document.createElement("a");
     tshirtHead.classList.add("clickedHead");
     tshirtText.classList.add("clickedText");
+    tshirtLink.classList.add("clickedLink");
     tshirtHead.innerHTML = "School";
     tshirtText.innerHTML = " tshirt";
+    tshirtLink.innerHTML = "See Project";
+    tshirtLink.setAttribute("href", "https://github.com/miravit/Webshop");
+    tshirtLink.setAttribute("target", "_blank");
 
     //   const todoMobile: HTMLImageElement = document.createElement("img");
     //   todoMobile.src = "../assets/todolist-mobile.png";
@@ -81,6 +91,7 @@ tshirtPhoto.addEventListener("click", () => {
     //   todoMobile.setAttribute("src", "./assets/todolist-mobile.png");
     tshirtDiv.appendChild(tshirtHead);
     tshirtDiv.appendChild(tshirtText);
+    tshirtDiv.appendChild(tshirtLink);
   }
   tshirt = false;
 });
@@ -91,23 +102,27 @@ const recreatePhoto: HTMLAnchorElement = document.getElementById(
 let recreate: boolean = true;
 recreatePhoto.addEventListener("click", () => {
   if (recreate) {
-    const tshirtDiv: HTMLDivElement = document.getElementById(
+    const recreateDiv: HTMLDivElement = document.getElementById(
       "recreate-mobile"
     ) as HTMLDivElement;
     const recreateHead: HTMLParagraphElement = document.createElement("p");
     const recreateText: HTMLSpanElement = document.createElement("span");
+    const recreateLink: HTMLAnchorElement = document.createElement("a");
     recreateHead.classList.add("clickedHead");
     recreateText.classList.add("clickedText");
+    recreateLink.classList.add("clickedLink");
     recreateHead.innerHTML = "School";
     recreateText.innerHTML = " recreate";
+    recreateLink.innerHTML = "See Project";
+    recreateLink.setAttribute(
+      "href",
+      "https://github.com/miravit/html_css_uppgift"
+    );
+    recreateLink.setAttribute("target", "_blank");
 
-    //   const todoMobile: HTMLImageElement = document.createElement("img");
-    //   todoMobile.src = "../assets/todolist-mobile.png";
-    //   todoMobile.alt = "mobile version";
-
-    //   todoMobile.setAttribute("src", "./assets/todolist-mobile.png");
-    tshirtDiv.appendChild(recreateHead);
-    tshirtDiv.appendChild(recreateText);
+    recreateDiv.appendChild(recreateHead);
+    recreateDiv.appendChild(recreateText);
+    recreateDiv.appendChild(recreateLink);
   }
   recreate = false;
 });
@@ -124,18 +139,19 @@ iomdbPhoto.addEventListener("click", () => {
     ) as HTMLDivElement;
     const iomdbHead: HTMLParagraphElement = document.createElement("p");
     const iomdbText: HTMLSpanElement = document.createElement("span");
+    const iomdbLink: HTMLAnchorElement = document.createElement("a");
     iomdbHead.classList.add("clickedHead");
     iomdbText.classList.add("clickedText");
+    iomdbLink.classList.add("clickedLink");
     iomdbHead.innerHTML = "School";
     iomdbText.innerHTML = " iomdb";
+    iomdbLink.innerHTML = "See Project";
+    iomdbLink.setAttribute("href", "https://github.com/miravit/Search-Movies");
+    iomdbLink.setAttribute("target", "_blank");
 
-    //   const todoMobile: HTMLImageElement = document.createElement("img");
-    //   todoMobile.src = "../assets/todolist-mobile.png";
-    //   todoMobile.alt = "mobile version";
-
-    //   todoMobile.setAttribute("src", "./assets/todolist-mobile.png");
     iomdbDiv.appendChild(iomdbHead);
     iomdbDiv.appendChild(iomdbText);
+    iomdbDiv.appendChild(iomdbLink);
   }
   iomdb = false;
 });
@@ -148,9 +164,16 @@ const educationDiv: HTMLDivElement = document.getElementById(
 ) as HTMLDivElement;
 const educationSkills: HTMLSpanElement = document.createElement("span");
 
-educationButton.addEventListener("click", () => {
-  educationSkills.innerHTML =
-    "Javascript/Typescript, Css/sass, html5, Bootstrap, React, Vue, NodeJs, Git, MongoDb, Jest, GraphQl, SQL, Apollo, Postman, ";
+educationButton.addEventListener("click", test);
 
-  educationDiv.appendChild(educationSkills);
-});
+function test() {
+  if (educationButton) {
+    educationSkills.classList.add("about__skills-text");
+    educationSkills.innerHTML =
+      "Javascript/Typescript, Css/sass, Html5, Bootstrap, React, Vue, NodeJs, Git, MongoDb, Jest, GraphQl, SQL, Apollo, Postman, ";
+
+    educationDiv.appendChild(educationSkills);
+  } else {
+    educationDiv.innerHTML = "";
+  }
+}

@@ -1,12 +1,46 @@
+@use "mixins/variables" as var;
+
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__navigation {
+    &--links {
+      font-family: var.$font-stack;
+      color: var.$secondary-color;
+      text-align: center;
+      margin-left: 20px;
+    }
+    &--links:hover {
+      color: white;
+    }
+  }
+}
+
+.bi {
+  font-size: 100px;
+  text-decoration: none;
+}
+.bi:hover {
+  opacity: 0%;
+  text-decoration: none;
+  color: black;
+}
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 #contact-title {
   font-size: 5.5em;
-  margin: 100px;
   padding: 0;
+  margin: 0;
 }

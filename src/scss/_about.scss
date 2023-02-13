@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 150px;
+
   &__title {
     color: black;
     font-size: 6.3em;
@@ -20,6 +22,16 @@
   &__navDiv {
     display: flex;
     flex-direction: column;
+  }
+  &__presentation-text {
+    font-size: 0.82em;
+    font-family: var.$font-stack;
+    color: var.$secondary-color;
+  }
+  &__skills-text {
+    font-size: 0.82em;
+    font-family: var.$font-stack;
+    color: var.$secondary-color;
   }
 
   &__button {
@@ -40,10 +52,8 @@ img {
 .about-navigation {
   display: flex;
   flex-direction: row;
-  // padding-top: 50px;
-  // padding-left: 98%;
   &__links {
-    color: var.$secondary-color;
+    font-family: var.$font-stack;
     text-align: center;
     color: var.$secondary-color;
     margin-left: 20px;
