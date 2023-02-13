@@ -103,20 +103,21 @@
               </a>
             </div>
             <div class="allProjects__wrapper3" id="recreate-mobile">
-              <img
-                class="allProjects__wrapper--photo"
-                src="assets/recreate-website.png"
-              />
+              <a id="recreate-pic"
+                ><img
+                  class="allProjects__wrapper--photo"
+                  src="assets/recreate-website.png"
+                />
+              </a>
             </div>
             <div class="allProjects__wrapper4" id="iomdb-mobile">
-              <img
-                class="allProjects__wrapper--photo"
-                src="assets/IOMDB_API.png"
-              />
+              <a id="iomdb-pic"
+                ><img
+                  class="allProjects__wrapper--photo"
+                  src="assets/IOMDB_API.png"
+                />
+              </a>
             </div>
-            <!-- <button class="projects__button" id="project-button">
-              Show More
-            </button> -->
           </article>
         </section>
       </div>
@@ -124,22 +125,33 @@
     <section class="about" id="aboutpage">
       <h2 class="about__title" class="big-title">About</h2>
       <div class="about__photoDiv">
+        <nav class="about-navigation">
+          <a class="about-navigation__links" href="#homepage"> Home </a>
+          <a class="about-navigation__links" href="#workpage"> Work </a>
+          <a class="about-navigation__links" href="#contactpage"> Contact </a>
+        </nav>
         <img
           class="about__img"
           src="../src/assets/cv_bild_copy.png"
           alt="photo of me"
         />
-        <div class="about__navDiv">
-          <nav class="about-navigation">
-            <a class="about-navigation__links" href="#homepage"> Home </a>
-            <a class="about-navigation__links" href="#workpage"> Work </a>
-            <a class="about-navigation__links" href="#contactpage"> Contact </a>
-          </nav>
-        </div>
+        <div class="about__navDiv"></div>
       </div>
-      <span>ME:</span>
-      <span>EDUCATION:</span>
+      <span
+        >Hello there! My name is Mira Vitsas and I am currently studying the
+        Front End- Developer programme at Medieinstitutet in Stockholm. I've
+        always had a passion for design, creativeness and the web. These
+        passions, my soon to be finished education, combined with my previous
+        media and communication courses is what I believe make me a good future
+        developer
+      </span>
+      <span
+        >After my Exam I will have solid knowledge in: Javascript, Css and Html
+        including various frameworks.
+      </span>
       <span>STRENGTHS:</span>
+      <button class="about__button" id="education-button">Show More</button>
+      <div id="skills"></div>
     </section>
     <section id="contactpage" class="contact">
       <h2 class="big-title" id="contact-title">Contact</h2>

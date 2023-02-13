@@ -15,27 +15,38 @@
   }
   &__photoDiv {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   &__navDiv {
     display: flex;
     flex-direction: column;
   }
+
+  &__button {
+    background: none;
+    color: inherit;
+    padding: 0;
+    width: 80%;
+    font: inherit;
+    //cursor: pointer;
+    outline: inherit;
+  }
 }
 img {
   //gäller nu alla img
   width: 230px;
-  margin-left: 20px;
   border: 1px black solid;
 }
 .about-navigation {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   // padding-top: 50px;
   // padding-left: 98%;
   &__links {
-    padding-top: 7px;
     color: var.$secondary-color;
+    text-align: center;
+    color: var.$secondary-color;
+    margin-left: 20px;
   }
   &__links:hover {
     color: white;
