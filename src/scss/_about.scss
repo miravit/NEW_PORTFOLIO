@@ -3,7 +3,7 @@
 .about {
   display: flex;
   flex-direction: column;
-  //align-items: center;
+  align-items: center;
   &__title {
     color: black;
     font-size: 6.3em;
@@ -11,7 +11,7 @@
     padding-top: 80px;
     padding-bottom: 0;
     margin-bottom: -15px;
-    margin-left: 70px;
+    //margin-left: 100px;
   }
   &__photoDiv {
     display: flex;
@@ -31,8 +31,8 @@ img {
 .about-navigation {
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
-  padding-left: 98%;
+  // padding-top: 50px;
+  // padding-left: 98%;
   &__links {
     padding-top: 7px;
     color: var.$secondary-color;
