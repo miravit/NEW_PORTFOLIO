@@ -47,7 +47,7 @@ todoPhoto.addEventListener("click", () => {
     todoLink.classList.add("clickedLink");
     todoHead.innerHTML = "School";
     todoText.innerHTML =
-      "This project is from the course Javascript introduction where I made an app simulation a todolist. The application allows the user to create, remove and tick of any done task using local storage.";
+      "This project is a To-do list from the Javascript introduction course. The application allows the user to create, remove and tick of any done task using local storage.";
     todoLink.innerHTML = "See Project";
     todoLink.setAttribute("href", "https://github.com/miravit/todolist");
     todoLink.setAttribute("target", "_blank");

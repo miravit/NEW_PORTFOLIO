@@ -1,4 +1,5 @@
 @use "./mixins/variables" as var;
+@use "./mixins/breakpoints" as mix;
 
 .about {
   display: flex;
@@ -13,7 +14,6 @@
     padding-top: 80px;
     padding-bottom: 0;
     margin-bottom: -15px;
-    //margin-left: 100px;
   }
   &__photoDiv {
     display: flex;
@@ -27,11 +27,20 @@
     font-size: 0.82em;
     font-family: var.$font-stack;
     color: var.$secondary-color;
+    padding: 20px;
+    @include mix.desktop {
+      width: 900px;
+      text-align: center;
+    }
   }
   &__skills-text {
     font-size: 0.82em;
     font-family: var.$font-stack;
     color: var.$secondary-color;
+    @include mix.desktop {
+      width: 900px;
+      text-align: center;
+    }
   }
 
   &__button {
@@ -40,15 +49,17 @@
     padding: 0;
     width: 80%;
     font: inherit;
-    //cursor: pointer;
     outline: inherit;
+    @include mix.desktop {
+      width: 200px;
+    }
+  }
+  &__img {
+    width: 230px;
+    border: black solid 1px;
   }
 }
-img {
-  //gäller nu alla img
-  width: 230px;
-  border: 1px black solid;
-}
+
 .about-navigation {
   display: flex;
   flex-direction: row;

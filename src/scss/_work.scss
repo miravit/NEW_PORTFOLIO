@@ -1,4 +1,5 @@
 @use "mixins/variables" as var;
+@use "mixins/breakpoints" as mix;
 
 .work {
   //work section
@@ -41,12 +42,20 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    @include mix.desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      display: inline-grid;
+    }
     &__wrapper {
-      //height: 400px;
       &--photo {
         width: 370px;
-        margin: 10px; //background-color: white;
+        margin-bottom: -30px;
         display: block;
+        @include mix.desktop {
+          width: 600px;
+          display: inline;
+        }
       }
       &--photo:hover {
         opacity: 40%;
@@ -64,15 +73,49 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include mix.desktop {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 .clickedText {
   font-size: 0.75em;
   text-align: center;
   font-family: var.$font-stack;
   color: var.$secondary-color;
+  margin-bottom: 14px;
+  padding: 7px;
 }
 .clickedHead {
   font-size: 1em;
   font-family: var.$font-stack;
   color: var.$secondary-color;
+  margin-bottom: 0;
+  color: var.$third-color;
+}
+.clickedLink {
+  // color: var.$third-color;
+  // font-family: var.$font-stack;
+  // font-weight: bold;
+}
+
+#todo-phone,
+#tshirt-phone {
+  display: none;
+  @include mix.desktop {
+    display: inline;
+  }
+}
+
+#todo-phone-img,
+#tshirt-phone-img {
+  width: 400px;
+  display: none;
+  height: 350px;
+  padding-right: -300px;
+  margin: 0;
+  @include mix.desktop {
+    display: inline;
+  }
 }

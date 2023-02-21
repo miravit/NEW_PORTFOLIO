@@ -1,4 +1,5 @@
 @use "mixins/variables" as var;
+@use "./mixins/breakpoints" as mix;
 
 .contact {
   display: flex;

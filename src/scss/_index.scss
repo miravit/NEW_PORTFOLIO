@@ -1,5 +1,6 @@
 @use "mixins/variables" as var;
 @use "mixins/animation" as animation;
+@use "./mixins/breakpoints" as mix;
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
@@ -40,52 +41,58 @@ main {
   justify-content: center;
   //align-items: center;
   flex-direction: column;
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    &__text {
-      font-size: 0.76em;
-      width: 90vw;
-      padding-top: 30px;
-      margin-bottom: 30px;
-      padding-right: 10px;
-      margin-left: 10px;
-      font-style: bold;
-      font-family: var.$font-stack;
-      color: var.$secondary-color;
-    }
-
-    // &__div {  ////ska endast synas i dataläge
-    //   background-color: white;
-    //   width: 240px;
-    //   height: 300px;
-    //   margin-left: 75px;
-    // }
+  @include mix.desktop {
+    height: 100vh;
   }
-  .main-nav {
-    display: flex;
-    width: 100vw;
-    height: 60vh;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 30px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    &__text {
-      text-decoration: none;
-      color: var.$secondary-color;
-      font-size: 6.3em;
-      font-family: var.$font-secondary;
-      line-height: 100%;
-    }
-    &__text:hover {
-      text-decoration: none;
-      color: white;
+  &__text {
+    font-size: 0.76em;
+    width: 90vw;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 10px;
+    margin-left: 10px;
+    font-style: bold;
+    font-family: var.$font-stack;
+    color: var.$secondary-color;
+    @include mix.desktop {
+      width: 65vw;
+      padding-top: 0px;
+      margin-bottom: 0px;
     }
   }
 }
+
+.main-nav {
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+
+  &__text {
+    text-decoration: none;
+    color: var.$secondary-color;
+    font-size: 6.3em;
+    font-family: var.$font-secondary;
+    line-height: 100%;
+    @include mix.desktop {
+      font-size: 10em;
+    }
+  }
+  &__text:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
 footer {
   //inte ha i mobilen?
   background-color: white;
