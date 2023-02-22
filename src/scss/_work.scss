@@ -90,9 +90,7 @@
 .clickedHead {
   font-size: 1em;
   font-family: var.$font-stack;
-  color: var.$secondary-color;
   margin-bottom: 0;
-  color: var.$third-color;
 }
 .clickedLink {
   // color: var.$third-color;
@@ -101,7 +99,9 @@
 }
 
 #todo-phone,
-#tshirt-phone {
+#tshirt-phone,
+#recreate-phone,
+#iomdb-phone {
   display: none;
   @include mix.desktop {
     display: inline;
@@ -109,7 +109,9 @@
 }
 
 #todo-phone-img,
-#tshirt-phone-img {
+#tshirt-phone-img,
+#iomdb-phone-img,
+#recreate-phone-img {
   width: 400px;
   display: none;
   height: 350px;
@@ -117,5 +119,30 @@
   margin: 0;
   @include mix.desktop {
     display: inline;
+  }
+}
+
+#todo-mobile,
+#iomdb-mobile,
+#recreate-mobile,
+#tshirt-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hej {
+  margin-bottom: -60px;
+  @include mix.desktop {
+    color: orange;
+    margin-left: 46%;
+  }
+}
+
+.hej:first-child {
+  margin-top: 30px;
+  @include mix.desktop {
+    margin-top: 50px;
   }
 }

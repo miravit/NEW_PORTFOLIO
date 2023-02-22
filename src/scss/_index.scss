@@ -17,7 +17,7 @@ body {
   padding: 0;
 }
 .navbar-brand:first-child {
-  color: rgb(29, 126, 45);
+  color: #934ea7;
   margin-left: 6px;
   font-weight: bold;
   font-family: var.$font-stack;
@@ -40,6 +40,7 @@ main {
   display: flex;
   justify-content: center;
   //align-items: center;
+  height: 100vh;
   flex-direction: column;
   @include mix.desktop {
     height: 100vh;

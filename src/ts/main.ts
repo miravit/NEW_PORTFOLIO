@@ -47,7 +47,7 @@ todoPhoto.addEventListener("click", () => {
     todoLink.classList.add("clickedLink");
     todoHead.innerHTML = "School";
     todoText.innerHTML =
-      "This project is a To-do list from the Javascript introduction course. The application allows the user to create, remove and tick of any done task using local storage.";
+      "My To-Do List web application allows users to quickly and easily create and manage tasks. Built with JavaScript, HTML and CSS, the app utilizes local storage to save user data. With a simple design, users can add and delete tasks with a single click. Additionally, users can mark tasks as completed, which will be stored and displayed in a separate list.";
     todoLink.innerHTML = "See Project";
     todoLink.setAttribute("href", "https://github.com/miravit/todolist");
     todoLink.setAttribute("target", "_blank");
@@ -79,7 +79,8 @@ tshirtPhoto.addEventListener("click", () => {
     tshirtText.classList.add("clickedText");
     tshirtLink.classList.add("clickedLink");
     tshirtHead.innerHTML = "School";
-    tshirtText.innerHTML = " tshirt";
+    tshirtText.innerHTML =
+      "This group project is a simulated web shop application built with JavaScript and uses local storage to store data. It allows users to shop and add products to their cart, adjust the quantity and size of their items, and simulate a purchase. Customers can also view their cart and checkout when they are ready to make their purchase. The application is intuitive and user-friendly, making it easy for shoppers to find and purchase the products they need.";
     tshirtLink.innerHTML = "See Project";
     tshirtLink.setAttribute("href", "https://github.com/miravit/Webshop");
     tshirtLink.setAttribute("target", "_blank");
