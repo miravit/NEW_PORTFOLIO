@@ -90,12 +90,23 @@
 .clickedHead {
   font-size: 1em;
   font-family: var.$font-stack;
+  color: var.$forth-color;
   margin-bottom: 0;
 }
+.clickedKey {
+  color: var.$secondary-color;
+  font-family: var.$font-stack;
+}
 .clickedLink {
-  // color: var.$third-color;
-  // font-family: var.$font-stack;
-  // font-weight: bold;
+  border: 1px solid black;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+.clickedLink:nth-child(2) {
+  margin-bottom: 50px;
+}
+.clickedLink:hover {
+  color: var.$forth-color;
 }
 
 #todo-phone,
@@ -135,7 +146,7 @@
 .hej {
   margin-bottom: -60px;
   @include mix.desktop {
-    color: orange;
+    color: black;
     margin-left: 46%;
   }
 }

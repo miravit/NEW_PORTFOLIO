@@ -11,6 +11,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    @include mix.desktop {
+      margin-top: 100px;
+    }
   }
   &__navigation {
     &--links {
